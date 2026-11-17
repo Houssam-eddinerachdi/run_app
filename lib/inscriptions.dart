@@ -15,23 +15,34 @@ class _InscriptionState extends State<Inscription> {
       body: Column(
         children: [
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Email',
               hintText: 'Saisir votre email',
             ),
-            validator: (value) {},
           ),
-          SizedBox(height: 20),
+
+          const SizedBox(height: 20),
+
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Password',
             ),
             obscureText: true,
-            validator: (value) {},
           ),
-          ElevatedButton(onPressed: () {}, child: Text("Inscription")),
+
+          ElevatedButton(
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text("Vous êtes inscrit avec succès !"),
+                  backgroundColor: Colors.green,
+                ),
+              );
+            },
+            child: const Text("Inscription"),
+          ),
         ],
       ),
     );
