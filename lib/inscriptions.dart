@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
-
 class Inscription extends StatefulWidget {
   const Inscription({super.key});
 
@@ -12,6 +10,9 @@ class Inscription extends StatefulWidget {
 class _InscriptionState extends State<Inscription> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: const Text("Inscription")));
+    return Scaffold(
+      appBar: AppBar(title: const Text("Inscription")),
+      body: const Column(children: []),
+    );
   }
 }
